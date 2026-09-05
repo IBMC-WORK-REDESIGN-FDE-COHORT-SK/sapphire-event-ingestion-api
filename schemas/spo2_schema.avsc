@@ -1,0 +1,158 @@
+{
+  "type": "record",
+  "name": "SleepMetric",
+  "namespace": "com.healthmetrics.telemetry.sleep",
+  "doc": "Sleep metrics (duration, stages, quality)",
+  "fields": [
+    {
+      "name": "request_id",
+      "type": "string",
+      "doc": "Original request ID for idempotency tracking"
+    },
+    {
+      "name": "resource",
+      "type": {
+        "type": "record",
+        "name": "Resource",
+        "namespace": "com.healthmetrics.telemetry",
+        "doc": "Resource information following OpenTelemetry model",
+        "fields": [
+          {
+            "name": "attributes",
+            "type": {
+              "type": "record",
+              "name": "ResourceAttributes",
+              "namespace": "com.healthmetrics.telemetry",
+              "doc": "Device and user identification attributes",
+              "fields": [
+                {
+                  "name": "device_id",
+                  "type": "string",
+                  "doc": "Unique device identifier"
+                },
+                {
+                  "name": "device_type",
+                  "type": "string",
+                  "doc": "Type of device (smartwatch, fitness_band, mobile_app, etc.)"
+                },
+                {
+                  "name": "device_manufacturer",
+                  "type": "string",
+                  "default": "",
+                  "doc": "Device manufacturer"
+                },
+                {
+                  "name": "device_model",
+                  "type": "string",
+                  "default": "",
+                  "doc": "Device model"
+                },
+                {
+                  "name": "user_id",
+                  "type": "string",
+                  "doc": "Unique user identifier (pseudonymized)"
+                },
+                {
+                  "name": "app_version",
+                  "type": "string",
+                  "default": "",
+                  "doc": "Application version"
+                }
+              ]
+            },
+            "doc": "Resource attributes"
+          }
+        ]
+      },
+      "doc": "Resource information"
+    },
+    {
+      "name": "scope",
+      "type": {
+        "type": "record",
+        "name": "Scope",
+        "namespace": "com.healthmetrics.telemetry",
+        "doc": "Instrumentation scope following OpenTelemetry model",
+        "fields": [
+          {
+            "name": "name",
+            "type": "string",
+            "doc": "Scope name (e.g., health.metrics.collector)"
+          },
+          {
+            "name": "version",
+            "type": "string",
+            "doc": "Scope version"
+          }
+        ]
+      },
+      "doc": "Instrumentation scope"
+    },
+    {
+      "name": "metric_name",
+      "type": {
+        "type": "enum",
+        "name": "SleepMetricType",
+        "symbols": [
+          "health_sleep_duration",
+          "health_sleep_stage_deep",
+          "health_sleep_stage_light",
+          "health_sleep_stage_rem",
+          "health_sleep_stage_awake",
+          "health_sleep_quality"
+        ]
+      },
+      "doc": "Type of sleep metric"
+    },
+    {
+      "name": "unit",
+      "type": "string",
+      "doc": "Metric unit (s for duration, score for quality)"
+    },
+    {
+      "name": "data_points",
+      "type": {
+        "type": "record",
+        "name": "DataPoint",
+        "namespace": "com.healthmetrics.telemetry",
+        "doc": "Individual metric data point following OpenTelemetry model",
+        "fields": [
+          {
+            "name": "attributes",
+            "type": "string",
+            "default": "{}",
+            "doc": "Additional attributes as JSON string"
+          },
+          {
+            "name": "start_time_unix_nano",
+            "type": "long",
+            "default": 0,
+            "doc": "Start time in nanoseconds (0 for non-aggregated metrics)"
+          },
+          {
+            "name": "time_unix_nano",
+            "type": "long",
+            "doc": "Measurement timestamp in nanoseconds since Unix epoch"
+          },
+          {
+            "name": "value",
+            "type": "double",
+            "doc": "Metric value"
+          }
+        ]
+      },
+      "doc": "Single data point"
+    },
+    {
+      "name": "ingestion_timestamp",
+      "type": "long",
+      "doc": "Timestamp when message was ingested by API (Unix nano)"
+    },
+    {
+      "name": "schema_version",
+      "type": "int",
+      "default": 1,
+      "doc": "Schema version"
+    }
+  ]
+}

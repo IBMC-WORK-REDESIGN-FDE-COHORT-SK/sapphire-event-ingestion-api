@@ -1,0 +1,76 @@
+{
+  "request_id": "req-spo2-fitbit-sj-002-1770401057",
+  "resource": {
+    "attributes": {
+      "device_id": "fitbit-sj-002",
+      "device_type": "fitness_band",
+      "device_manufacturer": "Fitbit",
+      "device_model": "Fitbit Charge 6",
+      "user_id": "sarah.johnson@sapphirewellness.com",
+      "app_version": "2.1.0"
+    }
+  },
+  "scope": {
+    "name": "health.metrics.collector",
+    "version": "1.0.0"
+  },
+  "metrics": [
+    {
+      "name": "health.spo2.percentage",
+      "description": "Blood oxygen saturation",
+      "unit": "%",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {},
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770258600000000000,
+            "value": 96.0
+          },
+          {
+            "attributes": {},
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770265800000000000,
+            "value": 98.0
+          },
+          {
+            "attributes": {},
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770273000000000000,
+            "value": 99.0
+          },
+          {
+            "attributes": {},
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770280200000000000,
+            "value": 96.0
+          },
+          {
+            "attributes": {},
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770287400000000000,
+            "value": 96.0
+          },
+          {
+            "attributes": {},
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770294600000000000,
+            "value": 99.0
+          },
+          {
+            "attributes": {},
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770301800000000000,
+            "value": 97.0
+          },
+          {
+            "attributes": {},
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770309000000000000,
+            "value": 96.0
+          }
+        ]
+      }
+    }
+  ]
+}

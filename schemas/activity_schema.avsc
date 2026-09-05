@@ -1,0 +1,112 @@
+{
+  "type": "record",
+  "name": "ActivityMetric",
+  "namespace": "com.healthmetrics.telemetry.activity",
+  "doc": "Activity metrics (steps, distance, calories)",
+  "fields": [
+    {
+      "name": "request_id",
+      "type": "string",
+      "doc": "Original request ID for idempotency tracking"
+    },
+    {
+      "name": "resource",
+      "type": {
+        "type": "record",
+        "name": "Resource",
+        "namespace": "com.healthmetrics.telemetry",
+        "fields": [
+          {
+            "name": "attributes",
+            "type": {
+              "type": "record",
+              "name": "ResourceAttributes",
+              "fields": [
+                {"name": "device_id", "type": "string"},
+                {"name": "device_type", "type": "string"},
+                {"name": "device_manufacturer", "type": "string", "default": ""},
+                {"name": "device_model", "type": "string", "default": ""},
+                {"name": "user_id", "type": "string"},
+                {"name": "app_version", "type": "string", "default": ""}
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "scope",
+      "type": {
+        "type": "record",
+        "name": "Scope",
+        "namespace": "com.healthmetrics.telemetry",
+        "fields": [
+          {"name": "name", "type": "string"},
+          {"name": "version", "type": "string"}
+        ]
+      }
+    },
+    {
+      "name": "metric_name",
+      "type": {
+        "type": "enum",
+        "name": "ActivityMetricType",
+        "symbols": [
+          "health_activity_steps",
+          "health_activity_distance",
+          "health_activity_calories",
+          "health_activity_active_minutes",
+          "health_activity_floors_climbed"
+        ]
+      },
+      "doc": "Type of activity metric"
+    },
+    {
+      "name": "unit",
+      "type": "string",
+      "doc": "Metric unit (steps, m, kcal, min, floors)"
+    },
+    {
+      "name": "data_points",
+      "type": {
+        "type": "record",
+        "name": "DataPoint",
+        "namespace": "com.healthmetrics.telemetry",
+        "fields": [
+          {
+            "name": "attributes",
+            "type": "string",
+            "default": "{}",
+            "doc": "Additional attributes as JSON string"
+          },
+          {
+            "name": "start_time_unix_nano",
+            "type": "long",
+            "default": 0,
+            "doc": "Start time in nanoseconds (0 for non-aggregated metrics)"
+          },
+          {
+            "name": "time_unix_nano",
+            "type": "long"
+          },
+          {
+            "name": "value",
+            "type": "double"
+          }
+        ]
+      },
+      "doc": "Single data point"
+    },
+    {
+      "name": "ingestion_timestamp",
+      "type": "long",
+      "doc": "Timestamp when message was ingested by API (Unix nano)"
+    },
+    {
+      "name": "schema_version",
+      "type": "int",
+      "default": 1,
+      "doc": "Schema version"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "request_id": "req-workout-apple-watch-md-001-1770401057",
+  "resource": {
+    "attributes": {
+      "device_id": "apple-watch-md-001",
+      "device_type": "smartwatch",
+      "device_manufacturer": "Apple",
+      "device_model": "Apple Watch Series 9",
+      "user_id": "michael.davis@sapphirewellness.com",
+      "app_version": "2.1.0"
+    }
+  },
+  "scope": {
+    "name": "health.metrics.collector",
+    "version": "1.0.0"
+  },
+  "metrics": [
+    {
+      "name": "health.workout.duration",
+      "description": "Workout duration",
+      "unit": "s",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "workout_type": "running"
+            },
+            "start_time_unix_nano": 1770294600000000000,
+            "time_unix_nano": 1770298193000000000,
+            "value": 3593.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.workout.distance",
+      "description": "Distance covered",
+      "unit": "m",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "workout_type": "running"
+            },
+            "start_time_unix_nano": 1770294600000000000,
+            "time_unix_nano": 1770298193000000000,
+            "value": 7318.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.workout.calories",
+      "description": "Calories burned",
+      "unit": "kcal",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "workout_type": "running"
+            },
+            "start_time_unix_nano": 1770294600000000000,
+            "time_unix_nano": 1770298193000000000,
+            "value": 465.0
+          }
+        ]
+      }
+    }
+  ]
+}

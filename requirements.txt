@@ -1,0 +1,40 @@
+# FastAPI and ASGI server
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+python-multipart==0.0.6
+
+# Pydantic
+pydantic==2.5.3
+pydantic-settings==2.1.0
+
+# Kafka
+aiokafka==0.10.0
+confluent-kafka[avro,schema-registry]==2.3.0
+fastavro==1.9.3
+
+# Authentication
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+pyjwt[crypto]==2.8.0
+requests==2.31.0
+
+# Redis (for idempotency)
+redis==5.0.1
+
+# OpenTelemetry - Core (upgraded for exemplar support)
+opentelemetry-api==1.27.0
+opentelemetry-sdk==1.27.0
+opentelemetry-exporter-otlp==1.27.0
+opentelemetry-exporter-otlp-proto-grpc==1.27.0
+
+# OpenTelemetry - Auto-instrumentation (upgraded to match core)
+opentelemetry-instrumentation-fastapi==0.48b0
+opentelemetry-instrumentation-redis==0.48b0
+opentelemetry-instrumentation-requests==0.48b0
+
+# Logging
+python-json-logger==2.0.7
+
+# Utilities
+python-dateutil==2.8.2
+pytz==2023.3

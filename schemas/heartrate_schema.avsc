@@ -1,0 +1,157 @@
+{
+  "type": "record",
+  "name": "HeartRateMetric",
+  "namespace": "com.healthmetrics.telemetry.heartrate",
+  "doc": "Heart rate metrics (continuous, resting, max)",
+  "fields": [
+    {
+      "name": "request_id",
+      "type": "string",
+      "doc": "Original request ID for idempotency tracking"
+    },
+    {
+      "name": "resource",
+      "type": {
+        "type": "record",
+        "name": "Resource",
+        "namespace": "com.healthmetrics.telemetry",
+        "doc": "Resource information following OpenTelemetry model",
+        "fields": [
+          {
+            "name": "attributes",
+            "type": {
+              "type": "record",
+              "name": "ResourceAttributes",
+              "namespace": "com.healthmetrics.telemetry",
+              "doc": "Device and user identification attributes",
+              "fields": [
+                {
+                  "name": "device_id",
+                  "type": "string",
+                  "doc": "Unique device identifier"
+                },
+                {
+                  "name": "device_type",
+                  "type": "string",
+                  "doc": "Type of device (smartwatch, fitness_band, mobile_app, etc.)"
+                },
+                {
+                  "name": "device_manufacturer",
+                  "type": "string",
+                  "default": "",
+                  "doc": "Device manufacturer"
+                },
+                {
+                  "name": "device_model",
+                  "type": "string",
+                  "default": "",
+                  "doc": "Device model"
+                },
+                {
+                  "name": "user_id",
+                  "type": "string",
+                  "doc": "Unique user identifier (pseudonymized)"
+                },
+                {
+                  "name": "app_version",
+                  "type": "string",
+                  "default": "",
+                  "doc": "Application version"
+                }
+              ]
+            },
+            "doc": "Resource attributes"
+          }
+        ]
+      },
+      "doc": "Resource information"
+    },
+    {
+      "name": "scope",
+      "type": {
+        "type": "record",
+        "name": "Scope",
+        "namespace": "com.healthmetrics.telemetry",
+        "doc": "Instrumentation scope following OpenTelemetry model",
+        "fields": [
+          {
+            "name": "name",
+            "type": "string",
+            "doc": "Scope name (e.g., health.metrics.collector)"
+          },
+          {
+            "name": "version",
+            "type": "string",
+            "doc": "Scope version"
+          }
+        ]
+      },
+      "doc": "Instrumentation scope"
+    },
+    {
+      "name": "metric_name",
+      "type": {
+        "type": "enum",
+        "name": "HeartRateMetricType",
+        "symbols": [
+          "health_heartrate_bpm",
+          "health_heartrate_resting",
+          "health_heartrate_max",
+          "health_heartrate_average",
+          "health_heartrate_variability"
+        ]
+      },
+      "doc": "Type of heart rate metric"
+    },
+    {
+      "name": "unit",
+      "type": "string",
+      "doc": "Metric unit (beats/min or ms for HRV)"
+    },
+    {
+      "name": "data_points",
+      "type": {
+        "type": "record",
+        "name": "DataPoint",
+        "namespace": "com.healthmetrics.telemetry",
+        "doc": "Individual metric data point following OpenTelemetry model",
+        "fields": [
+          {
+            "name": "attributes",
+            "type": "string",
+            "default": "{}",
+            "doc": "Additional attributes as JSON string"
+          },
+          {
+            "name": "start_time_unix_nano",
+            "type": "long",
+            "default": 0,
+            "doc": "Start time in nanoseconds (0 for non-aggregated metrics)"
+          },
+          {
+            "name": "time_unix_nano",
+            "type": "long",
+            "doc": "Measurement timestamp in nanoseconds since Unix epoch"
+          },
+          {
+            "name": "value",
+            "type": "double",
+            "doc": "Metric value"
+          }
+        ]
+      },
+      "doc": "Single data point"
+    },
+    {
+      "name": "ingestion_timestamp",
+      "type": "long",
+      "doc": "Timestamp when message was ingested by API (Unix nano)"
+    },
+    {
+      "name": "schema_version",
+      "type": "int",
+      "default": 1,
+      "doc": "Schema version"
+    }
+  ]
+}

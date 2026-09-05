@@ -1,0 +1,462 @@
+{
+  "request_id": "req-heartrate-apple-watch-md-001-1770401057",
+  "resource": {
+    "attributes": {
+      "device_id": "apple-watch-md-001",
+      "device_type": "smartwatch",
+      "device_manufacturer": "Apple",
+      "device_model": "Apple Watch Series 9",
+      "user_id": "michael.davis@sapphirewellness.com",
+      "app_version": "2.1.0"
+    }
+  },
+  "scope": {
+    "name": "health.metrics.collector",
+    "version": "1.0.0"
+  },
+  "metrics": [
+    {
+      "name": "health.heartrate.bpm",
+      "description": "Continuous heart rate monitoring",
+      "unit": "beats/min",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770251400000000000,
+            "value": 97.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770251700000000000,
+            "value": 117.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770252000000000000,
+            "value": 98.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770252300000000000,
+            "value": 68.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770252600000000000,
+            "value": 96.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770252900000000000,
+            "value": 87.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770253200000000000,
+            "value": 71.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770253500000000000,
+            "value": 111.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770253800000000000,
+            "value": 110.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770254100000000000,
+            "value": 97.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770254400000000000,
+            "value": 108.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770254700000000000,
+            "value": 117.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770255000000000000,
+            "value": 120.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770255300000000000,
+            "value": 124.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770255600000000000,
+            "value": 152.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770255900000000000,
+            "value": 124.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770256200000000000,
+            "value": 139.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770256500000000000,
+            "value": 147.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770256800000000000,
+            "value": 142.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770257100000000000,
+            "value": 153.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770257400000000000,
+            "value": 126.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770257700000000000,
+            "value": 142.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770258000000000000,
+            "value": 120.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770258300000000000,
+            "value": 133.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770258600000000000,
+            "value": 80.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770258900000000000,
+            "value": 97.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770259200000000000,
+            "value": 68.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770259500000000000,
+            "value": 104.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770259800000000000,
+            "value": 104.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770260100000000000,
+            "value": 103.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770260400000000000,
+            "value": 86.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770260700000000000,
+            "value": 105.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770261000000000000,
+            "value": 90.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770261300000000000,
+            "value": 106.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770261600000000000,
+            "value": 86.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770261900000000000,
+            "value": 100.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770262200000000000,
+            "value": 81.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770262500000000000,
+            "value": 117.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770262800000000000,
+            "value": 69.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770263100000000000,
+            "value": 75.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770263400000000000,
+            "value": 111.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770263700000000000,
+            "value": 115.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770264000000000000,
+            "value": 73.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770264300000000000,
+            "value": 98.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770264600000000000,
+            "value": 99.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770264900000000000,
+            "value": 81.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770265200000000000,
+            "value": 80.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770265500000000000,
+            "value": 72.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770265800000000000,
+            "value": 101.0
+          },
+          {
+            "attributes": {
+              "measurement_type": "continuous"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770266100000000000,
+            "value": 110.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.heartrate.resting",
+      "description": "Resting heart rate",
+      "unit": "beats/min",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "measurement_time": "morning"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770255000000000000,
+            "value": 59.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.heartrate.max",
+      "description": "Maximum heart rate",
+      "unit": "beats/min",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "activity": "running"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770296400000000000,
+            "value": 181.0
+          }
+        ]
+      }
+    }
+  ]
+}

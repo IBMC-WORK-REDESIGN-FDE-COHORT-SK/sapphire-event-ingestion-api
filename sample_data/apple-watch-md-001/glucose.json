@@ -1,0 +1,87 @@
+{
+  "request_id": "req-glucose-apple-watch-md-001-1770401057",
+  "resource": {
+    "attributes": {
+      "device_id": "apple-watch-md-001",
+      "device_type": "smartwatch",
+      "device_manufacturer": "Apple",
+      "device_model": "Apple Watch Series 9",
+      "user_id": "michael.davis@sapphirewellness.com",
+      "app_version": "2.1.0"
+    }
+  },
+  "scope": {
+    "name": "health.metrics.collector",
+    "version": "1.0.0"
+  },
+  "metrics": [
+    {
+      "name": "health.glucose.fasting",
+      "description": "Blood glucose - fasting",
+      "unit": "mg/dL",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "measurement_type": "fasting"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770256800000000000,
+            "value": 75.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.glucose.post_meal",
+      "description": "Blood glucose - post_meal",
+      "unit": "mg/dL",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "measurement_type": "post_meal"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770264000000000000,
+            "value": 130.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.glucose.post_meal",
+      "description": "Blood glucose - post_meal",
+      "unit": "mg/dL",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "measurement_type": "post_meal"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770278400000000000,
+            "value": 107.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.glucose.post_meal",
+      "description": "Blood glucose - post_meal",
+      "unit": "mg/dL",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "measurement_type": "post_meal"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770300000000000000,
+            "value": 106.0
+          }
+        ]
+      }
+    }
+  ]
+}

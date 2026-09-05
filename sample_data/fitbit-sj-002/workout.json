@@ -1,0 +1,70 @@
+{
+  "request_id": "req-workout-fitbit-sj-002-1770401057",
+  "resource": {
+    "attributes": {
+      "device_id": "fitbit-sj-002",
+      "device_type": "fitness_band",
+      "device_manufacturer": "Fitbit",
+      "device_model": "Fitbit Charge 6",
+      "user_id": "sarah.johnson@sapphirewellness.com",
+      "app_version": "2.1.0"
+    }
+  },
+  "scope": {
+    "name": "health.metrics.collector",
+    "version": "1.0.0"
+  },
+  "metrics": [
+    {
+      "name": "health.workout.duration",
+      "description": "Workout duration",
+      "unit": "s",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "workout_type": "jogging"
+            },
+            "start_time_unix_nano": 1770294600000000000,
+            "time_unix_nano": 1770297194000000000,
+            "value": 2594.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.workout.distance",
+      "description": "Distance covered",
+      "unit": "m",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "workout_type": "jogging"
+            },
+            "start_time_unix_nano": 1770294600000000000,
+            "time_unix_nano": 1770297194000000000,
+            "value": 5869.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.workout.calories",
+      "description": "Calories burned",
+      "unit": "kcal",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "workout_type": "jogging"
+            },
+            "start_time_unix_nano": 1770294600000000000,
+            "time_unix_nano": 1770297194000000000,
+            "value": 390.0
+          }
+        ]
+      }
+    }
+  ]
+}

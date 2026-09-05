@@ -1,0 +1,529 @@
+{
+  "request_id": "req-activity-fitbit-sj-002-1770401057",
+  "resource": {
+    "attributes": {
+      "device_id": "fitbit-sj-002",
+      "device_type": "fitness_band",
+      "device_manufacturer": "Fitbit",
+      "device_model": "Fitbit Charge 6",
+      "user_id": "sarah.johnson@sapphirewellness.com",
+      "app_version": "2.1.0"
+    }
+  },
+  "scope": {
+    "name": "health.metrics.collector",
+    "version": "1.0.0"
+  },
+  "metrics": [
+    {
+      "name": "health.activity.steps",
+      "description": "Step count in 30-minute window",
+      "unit": "steps",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "aggregation_window": "30m"
+            },
+            "start_time_unix_nano": 1770229800000000000,
+            "time_unix_nano": 1770231600000000000,
+            "value": 47
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.activity.distance",
+      "description": "Distance traveled",
+      "unit": "m",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "aggregation_window": "30m"
+            },
+            "start_time_unix_nano": 1770229800000000000,
+            "time_unix_nano": 1770231600000000000,
+            "value": 35.2
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.activity.calories",
+      "description": "Calories burned",
+      "unit": "kcal",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "aggregation_window": "30m"
+            },
+            "start_time_unix_nano": 1770229800000000000,
+            "time_unix_nano": 1770231600000000000,
+            "value": 1.9
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.activity.steps",
+      "description": "Step count in 30-minute window",
+      "unit": "steps",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "aggregation_window": "30m"
+            },
+            "start_time_unix_nano": 1770231600000000000,
+            "time_unix_nano": 1770233400000000000,
+            "value": 17
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.activity.distance",
+      "description": "Distance traveled",
+      "unit": "m",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "aggregation_window": "30m"
+            },
+            "start_time_unix_nano": 1770231600000000000,
+            "time_unix_nano": 1770233400000000000,
+            "value": 12.8
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.activity.calories",
+      "description": "Calories burned",
+      "unit": "kcal",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "aggregation_window": "30m"
+            },
+            "start_time_unix_nano": 1770231600000000000,
+            "time_unix_nano": 1770233400000000000,
+            "value": 0.7
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.activity.steps",
+      "description": "Step count in 30-minute window",
+      "unit": "steps",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "aggregation_window": "30m"
+            },
+            "start_time_unix_nano": 1770233400000000000,
+            "time_unix_nano": 1770235200000000000,
+            "value": 6
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.activity.distance",
+      "description": "Distance traveled",
+      "unit": "m",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "aggregation_window": "30m"
+            },
+            "start_time_unix_nano": 1770233400000000000,
+            "time_unix_nano": 1770235200000000000,
+            "value": 4.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.activity.calories",
+      "description": "Calories burned",
+      "unit": "kcal",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "aggregation_window": "30m"
+            },
+            "start_time_unix_nano": 1770233400000000000,
+            "time_unix_nano": 1770235200000000000,
+            "value": 0.2
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.activity.steps",
+      "description": "Step count in 30-minute window",
+      "unit": "steps",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "aggregation_window": "30m"
+            },
+            "start_time_unix_nano": 1770235200000000000,
+            "time_unix_nano": 1770237000000000000,
+            "value": 48
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.activity.distance",
+      "description": "Distance traveled",
+      "unit": "m",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "aggregation_window": "30m"
+            },
+            "start_time_unix_nano": 1770235200000000000,
+            "time_unix_nano": 1770237000000000000,
+            "value": 36.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.activity.calories",
+      "description": "Calories burned",
+      "unit": "kcal",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "aggregation_window": "30m"
+            },
+            "start_time_unix_nano": 1770235200000000000,
+            "time_unix_nano": 1770237000000000000,
+            "value": 1.9
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.activity.steps",
+      "description": "Step count in 30-minute window",
+      "unit": "steps",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "aggregation_window": "30m"
+            },
+            "start_time_unix_nano": 1770237000000000000,
+            "time_unix_nano": 1770238800000000000,
+            "value": 30
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.activity.distance",
+      "description": "Distance traveled",
+      "unit": "m",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "aggregation_window": "30m"
+            },
+            "start_time_unix_nano": 1770237000000000000,
+            "time_unix_nano": 1770238800000000000,
+            "value": 22.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.activity.calories",
+      "description": "Calories burned",
+      "unit": "kcal",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "aggregation_window": "30m"
+            },
+            "start_time_unix_nano": 1770237000000000000,
+            "time_unix_nano": 1770238800000000000,
+            "value": 1.2
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.activity.steps",
+      "description": "Step count in 30-minute window",
+      "unit": "steps",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "aggregation_window": "30m"
+            },
+            "start_time_unix_nano": 1770238800000000000,
+            "time_unix_nano": 1770240600000000000,
+            "value": 6
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.activity.distance",
+      "description": "Distance traveled",
+      "unit": "m",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "aggregation_window": "30m"
+            },
+            "start_time_unix_nano": 1770238800000000000,
+            "time_unix_nano": 1770240600000000000,
+            "value": 4.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.activity.calories",
+      "description": "Calories burned",
+      "unit": "kcal",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "aggregation_window": "30m"
+            },
+            "start_time_unix_nano": 1770238800000000000,
+            "time_unix_nano": 1770240600000000000,
+            "value": 0.2
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.activity.steps",
+      "description": "Step count in 30-minute window",
+      "unit": "steps",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "aggregation_window": "30m"
+            },
+            "start_time_unix_nano": 1770240600000000000,
+            "time_unix_nano": 1770242400000000000,
+            "value": 10
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.activity.distance",
+      "description": "Distance traveled",
+      "unit": "m",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "aggregation_window": "30m"
+            },
+            "start_time_unix_nano": 1770240600000000000,
+            "time_unix_nano": 1770242400000000000,
+            "value": 7.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.activity.calories",
+      "description": "Calories burned",
+      "unit": "kcal",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "aggregation_window": "30m"
+            },
+            "start_time_unix_nano": 1770240600000000000,
+            "time_unix_nano": 1770242400000000000,
+            "value": 0.4
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.activity.steps",
+      "description": "Step count in 30-minute window",
+      "unit": "steps",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "aggregation_window": "30m"
+            },
+            "start_time_unix_nano": 1770242400000000000,
+            "time_unix_nano": 1770244200000000000,
+            "value": 41
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.activity.distance",
+      "description": "Distance traveled",
+      "unit": "m",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "aggregation_window": "30m"
+            },
+            "start_time_unix_nano": 1770242400000000000,
+            "time_unix_nano": 1770244200000000000,
+            "value": 30.8
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.activity.calories",
+      "description": "Calories burned",
+      "unit": "kcal",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "aggregation_window": "30m"
+            },
+            "start_time_unix_nano": 1770242400000000000,
+            "time_unix_nano": 1770244200000000000,
+            "value": 1.6
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.activity.steps",
+      "description": "Step count in 30-minute window",
+      "unit": "steps",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "aggregation_window": "30m"
+            },
+            "start_time_unix_nano": 1770244200000000000,
+            "time_unix_nano": 1770246000000000000,
+            "value": 23
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.activity.distance",
+      "description": "Distance traveled",
+      "unit": "m",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "aggregation_window": "30m"
+            },
+            "start_time_unix_nano": 1770244200000000000,
+            "time_unix_nano": 1770246000000000000,
+            "value": 17.2
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.activity.calories",
+      "description": "Calories burned",
+      "unit": "kcal",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "aggregation_window": "30m"
+            },
+            "start_time_unix_nano": 1770244200000000000,
+            "time_unix_nano": 1770246000000000000,
+            "value": 0.9
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.activity.steps",
+      "description": "Step count in 30-minute window",
+      "unit": "steps",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "aggregation_window": "30m"
+            },
+            "start_time_unix_nano": 1770246000000000000,
+            "time_unix_nano": 1770247800000000000,
+            "value": 35
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.activity.distance",
+      "description": "Distance traveled",
+      "unit": "m",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "aggregation_window": "30m"
+            },
+            "start_time_unix_nano": 1770246000000000000,
+            "time_unix_nano": 1770247800000000000,
+            "value": 26.2
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.activity.calories",
+      "description": "Calories burned",
+      "unit": "kcal",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "aggregation_window": "30m"
+            },
+            "start_time_unix_nano": 1770246000000000000,
+            "time_unix_nano": 1770247800000000000,
+            "value": 1.4
+          }
+        ]
+      }
+    }
+  ]
+}

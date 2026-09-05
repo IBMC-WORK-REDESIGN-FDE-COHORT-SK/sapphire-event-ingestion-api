@@ -1,0 +1,109 @@
+{
+  "request_id": "req-sleep-fitbit-sj-002-1770401057",
+  "resource": {
+    "attributes": {
+      "device_id": "fitbit-sj-002",
+      "device_type": "fitness_band",
+      "device_manufacturer": "Fitbit",
+      "device_model": "Fitbit Charge 6",
+      "user_id": "sarah.johnson@sapphirewellness.com",
+      "app_version": "2.1.0"
+    }
+  },
+  "scope": {
+    "name": "health.metrics.collector",
+    "version": "1.0.0"
+  },
+  "metrics": [
+    {
+      "name": "health.sleep.duration",
+      "description": "Total sleep duration",
+      "unit": "s",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {},
+            "start_time_unix_nano": 1770226200000000000,
+            "time_unix_nano": 1770255000000000000,
+            "value": 28800.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.sleep.stage.deep",
+      "description": "Deep sleep duration",
+      "unit": "s",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {},
+            "start_time_unix_nano": 1770226200000000000,
+            "time_unix_nano": 1770255000000000000,
+            "value": 5471.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.sleep.stage.light",
+      "description": "Light sleep duration",
+      "unit": "s",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {},
+            "start_time_unix_nano": 1770226200000000000,
+            "time_unix_nano": 1770255000000000000,
+            "value": 14451.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.sleep.stage.rem",
+      "description": "REM sleep duration",
+      "unit": "s",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {},
+            "start_time_unix_nano": 1770226200000000000,
+            "time_unix_nano": 1770255000000000000,
+            "value": 6873.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.sleep.stage.awake",
+      "description": "Awake time during sleep",
+      "unit": "s",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {},
+            "start_time_unix_nano": 1770226200000000000,
+            "time_unix_nano": 1770255000000000000,
+            "value": 2005.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.sleep.quality",
+      "description": "Sleep quality score",
+      "unit": "score",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {},
+            "start_time_unix_nano": 1770226200000000000,
+            "time_unix_nano": 1770255000000000000,
+            "value": 78.0
+          }
+        ]
+      }
+    }
+  ]
+}

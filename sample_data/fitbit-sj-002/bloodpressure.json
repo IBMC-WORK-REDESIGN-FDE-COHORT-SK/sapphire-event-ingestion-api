@@ -1,0 +1,121 @@
+{
+  "request_id": "req-bp-fitbit-sj-002-1770401057",
+  "resource": {
+    "attributes": {
+      "device_id": "fitbit-sj-002",
+      "device_type": "fitness_band",
+      "device_manufacturer": "Fitbit",
+      "device_model": "Fitbit Charge 6",
+      "user_id": "sarah.johnson@sapphirewellness.com",
+      "app_version": "2.1.0"
+    }
+  },
+  "scope": {
+    "name": "health.metrics.collector",
+    "version": "1.0.0"
+  },
+  "metrics": [
+    {
+      "name": "health.bloodpressure.systolic",
+      "description": "Systolic blood pressure",
+      "unit": "mm[Hg]",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "measurement_context": "morning"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770258600000000000,
+            "value": 117.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.bloodpressure.diastolic",
+      "description": "Diastolic blood pressure",
+      "unit": "mm[Hg]",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "measurement_context": "morning"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770258600000000000,
+            "value": 77.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.bloodpressure.systolic",
+      "description": "Systolic blood pressure",
+      "unit": "mm[Hg]",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "measurement_context": "afternoon"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770280200000000000,
+            "value": 110.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.bloodpressure.diastolic",
+      "description": "Diastolic blood pressure",
+      "unit": "mm[Hg]",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "measurement_context": "afternoon"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770280200000000000,
+            "value": 75.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.bloodpressure.systolic",
+      "description": "Systolic blood pressure",
+      "unit": "mm[Hg]",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "measurement_context": "evening"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770301800000000000,
+            "value": 114.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.bloodpressure.diastolic",
+      "description": "Diastolic blood pressure",
+      "unit": "mm[Hg]",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {
+              "measurement_context": "evening"
+            },
+            "start_time_unix_nano": null,
+            "time_unix_nano": 1770301800000000000,
+            "value": 75.0
+          }
+        ]
+      }
+    }
+  ]
+}

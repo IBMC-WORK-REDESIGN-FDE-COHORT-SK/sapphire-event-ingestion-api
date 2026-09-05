@@ -1,0 +1,109 @@
+{
+  "request_id": "req-sleep-apple-watch-md-001-1770401057",
+  "resource": {
+    "attributes": {
+      "device_id": "apple-watch-md-001",
+      "device_type": "smartwatch",
+      "device_manufacturer": "Apple",
+      "device_model": "Apple Watch Series 9",
+      "user_id": "michael.davis@sapphirewellness.com",
+      "app_version": "2.1.0"
+    }
+  },
+  "scope": {
+    "name": "health.metrics.collector",
+    "version": "1.0.0"
+  },
+  "metrics": [
+    {
+      "name": "health.sleep.duration",
+      "description": "Total sleep duration",
+      "unit": "s",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {},
+            "start_time_unix_nano": 1770226200000000000,
+            "time_unix_nano": 1770255000000000000,
+            "value": 28800.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.sleep.stage.deep",
+      "description": "Deep sleep duration",
+      "unit": "s",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {},
+            "start_time_unix_nano": 1770226200000000000,
+            "time_unix_nano": 1770255000000000000,
+            "value": 5219.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.sleep.stage.light",
+      "description": "Light sleep duration",
+      "unit": "s",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {},
+            "start_time_unix_nano": 1770226200000000000,
+            "time_unix_nano": 1770255000000000000,
+            "value": 15758.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.sleep.stage.rem",
+      "description": "REM sleep duration",
+      "unit": "s",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {},
+            "start_time_unix_nano": 1770226200000000000,
+            "time_unix_nano": 1770255000000000000,
+            "value": 5859.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.sleep.stage.awake",
+      "description": "Awake time during sleep",
+      "unit": "s",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {},
+            "start_time_unix_nano": 1770226200000000000,
+            "time_unix_nano": 1770255000000000000,
+            "value": 1964.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "health.sleep.quality",
+      "description": "Sleep quality score",
+      "unit": "score",
+      "data": {
+        "data_points": [
+          {
+            "attributes": {},
+            "start_time_unix_nano": 1770226200000000000,
+            "time_unix_nano": 1770255000000000000,
+            "value": 85.0
+          }
+        ]
+      }
+    }
+  ]
+}
