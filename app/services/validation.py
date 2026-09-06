@@ -27,6 +27,8 @@ class ValidationService:
         "health.glucose.level": (20, 600),
         "health.spo2.percentage": (70, 100),
         "health.sleep.quality": (0, 100),
+        "health.temperature.celsius": (30.0, 45.0),
+        "health.temperature.fahrenheit": (86.0, 113.0),
     }
     
     async def validate_request(
