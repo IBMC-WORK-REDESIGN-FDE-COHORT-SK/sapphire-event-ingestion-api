@@ -1,0 +1,21 @@
+groups:
+  - name: temperature_ingestion_alerts
+    rules:
+      - alert: TemperatureIngestionErrorRateHigh
+        expr: >
+          rate(temperature_ingestion_rejected_total[5m])
+          /
+          (
+            rate(temperature_ingestion_accepted_total[5m])
+            + rate(temperature_ingestion_rejected_total[5m])
+          ) > 0.05
+        for: 1m
+        labels:
+          severity: warning
+          team: on-call
+        annotations:
+          summary: "Temperature ingestion error rate exceeds 5%"
+          description: >
+            Error rate {{ $value | humanizePercentage }} over last 5 min on instance
+            {{ $labels.instance }}. Investigate rejected temperature readings in
+            sapphire-event-ingestion-api logs.

@@ -6,7 +6,7 @@ import json
 from datetime import datetime
 from typing import Optional
 
-from fastapi import APIRouter, Depends, Header
+from fastapi import APIRouter, Depends, Header, HTTPException, status
 from opentelemetry import trace
 
 from app.models.request import MetricsIngestionRequest
@@ -14,9 +14,11 @@ from app.models.response import MetricsIngestionResponse
 from app.services.kafka_producer import kafka_producer
 from app.services.idempotency import idempotency_service
 from app.services.validation import validation_service
-from app.dependencies import get_current_device
+from app.dependencies import get_current_device, get_rate_limit_service
+from app.middleware.rate_limit import RateLimitService
 from app.core.exceptions import ValidationException
 from app.core.logging import get_logger
+from app.core.metrics import metrics_manager
 
 logger = get_logger(__name__)
 router = APIRouter()
@@ -33,6 +35,7 @@ tracer = trace.get_tracer(__name__)
 async def ingest_metrics(
     request: MetricsIngestionRequest,
     device_info: dict = Depends(get_current_device),
+    rate_limit_service: RateLimitService = Depends(get_rate_limit_service),
     x_request_id: Optional[str] = Header(None),
     x_device_timezone: Optional[str] = Header(None),
 ):
@@ -52,7 +55,7 @@ async def ingest_metrics(
         span.set_attribute("user.id", device_info["user_id"])
         span.set_attribute("metrics.count", len(request.metrics))
         
-        # Check idempotency
+        # Check idempotency — duplicates are short-circuited before rate-limit slot is consumed (G1)
         request_id = x_request_id or request.request_id
         if await idempotency_service.is_duplicate(request_id, device_info["device_id"]):
             logger.info(f"Duplicate request detected: {request_id}")
@@ -63,6 +66,16 @@ async def ingest_metrics(
             if cached_response:
                 return cached_response
         
+        # Rate limit check (all device requests — FR-002a)
+        # Execution order: idempotency → rate limit → validation → Kafka publish
+        is_allowed, retry_after = await rate_limit_service.check_rate_limit(device_info["device_id"])
+        if not is_allowed:
+            raise HTTPException(
+                status_code=status.HTTP_429_TOO_MANY_REQUESTS,
+                headers={"Retry-After": str(retry_after)},
+                detail="Rate limit exceeded. Too many requests from this device."
+            )
+
         # Validate request
         validation_errors = await validation_service.validate_request(request)
         if validation_errors:
@@ -143,10 +156,25 @@ async def ingest_metrics(
             response
         )
         
+        # Temperature-specific OTLP counters (temperature metrics only — FR-019/020)
+        temp_accepted = sum(
+            1 for m in request.metrics if m.name.startswith("health.temperature.")
+            and messages  # only count metrics that were successfully prepared
+        )
+        # Count temperature rejections from rejected_count proportionally
+        # (safe: non-temperature metrics do NOT increment these counters)
+        temp_total = sum(1 for m in request.metrics if m.name.startswith("health.temperature."))
+        temp_rejected = max(0, temp_total - temp_accepted)
+        if temp_total > 0:
+            metrics_manager.record_ingestion_error_rate(
+                accepted=success_count if temp_accepted > 0 else 0,
+                rejected=temp_rejected + failure_count if temp_total > 0 else 0
+            )
+
         # Add span attributes
         span.set_attribute("metrics.accepted", accepted_count)
         span.set_attribute("metrics.rejected", rejected_count)
-        
+
         logger.info(
             f"Ingested metrics: accepted={accepted_count}, rejected={rejected_count}",
             extra={

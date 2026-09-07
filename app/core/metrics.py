@@ -42,6 +42,10 @@ class MetricsManager:
         self.metrics_ingested_total = None
         self.validation_errors_total = None
         self.auth_attempts_total = None
+
+        # Temperature-specific counters (FR-019, FR-020)
+        self.temperature_ingestion_accepted_total = None
+        self.temperature_ingestion_rejected_total = None
         
         # Histograms
         self.http_request_duration = None
@@ -161,7 +165,20 @@ class MetricsManager:
                 description="Number of entries in idempotency cache",
                 unit="1"
             )
-            
+
+            # Temperature ingestion counters (FR-019, FR-020)
+            self.temperature_ingestion_accepted_total = self.meter.create_counter(
+                name="temperature.ingestion.accepted",
+                description="Total temperature metric ingestion requests accepted (FR-019)",
+                unit="1"
+            )
+
+            self.temperature_ingestion_rejected_total = self.meter.create_counter(
+                name="temperature.ingestion.rejected",
+                description="Total temperature metric ingestion requests rejected (FR-020)",
+                unit="1"
+            )
+
             self.initialized = True
             logger.info(f"OpenTelemetry metrics initialized, exporting to {settings.OTEL_EXPORTER_OTLP_ENDPOINT}")
             
@@ -331,6 +348,43 @@ class MetricsManager:
             self.idempotency_cache_size.add(size)
         except Exception as e:
             logger.error(f"Failed to update idempotency cache size: {e}")
+
+
+    def record_temperature_ingestion(self, status: str, count: int = 1):
+        """
+        Increment the named temperature ingestion counter.
+
+        Args:
+            status: "accepted" or "rejected"
+            count:  Number of readings to count (default 1).
+
+        References: FR-019 (accepted counter), FR-020 (rejected counter)
+        """
+        if not self.initialized:
+            return
+
+        try:
+            if status == "accepted":
+                self.temperature_ingestion_accepted_total.add(count, {"status": "accepted"})
+            elif status == "rejected":
+                self.temperature_ingestion_rejected_total.add(count, {"status": "rejected"})
+        except Exception as exc:
+            logger.error(f"Failed to record temperature ingestion metric: {exc}")
+
+    def record_ingestion_error_rate(self, accepted: int, rejected: int):
+        """
+        Record both accepted and rejected temperature counts in a single call.
+        Useful for alert-correlation logging (SC-008).
+
+        Args:
+            accepted: Count of accepted temperature readings.
+            rejected: Count of rejected temperature readings.
+        """
+        if not self.initialized:
+            return
+
+        self.record_temperature_ingestion("accepted", accepted)
+        self.record_temperature_ingestion("rejected", rejected)
 
 
 # Global metrics manager instance

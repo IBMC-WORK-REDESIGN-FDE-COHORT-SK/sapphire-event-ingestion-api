@@ -62,6 +62,9 @@ class Settings(BaseSettings):
     OTEL_EXPORTER_OTLP_ENDPOINT: str = "http://localhost:4317"
     # OTEL_METRICS_EXEMPLAR_FILTER: str = "always_on"  # always_on | trace_based | always_off
     
+    # Rate Limiting Settings (FR-002a)
+    RATE_LIMIT_RPM: int = 60  # Max requests per device per minute
+
     # Logging Settings
     LOG_LEVEL: str = "INFO"
     LOG_FORMAT: str = "json"
